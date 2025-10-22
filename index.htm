@@ -32,7 +32,6 @@
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.85);
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      animation: pulse 5s infinite;
     }
 
     h1 {
@@ -46,14 +45,21 @@
       font-size: 1.2rem;
       color: #555;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .SanJuanPabloII {
+    #countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0078d7;
+      margin-top: 15px;
+    }
+
+    img {
+      margin-top: 20px;
       width: 100%;
       max-width: 300px;
       border-radius: 15px;
-      margin-top: 10px;
     }
 
     @keyframes pulse {
@@ -61,7 +67,6 @@
       50% { transform: scale(1.05); }
     }
 
-    /* Ajustes para pantallas pequeñas */
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
@@ -69,12 +74,8 @@
       p {
         font-size: 1rem;
       }
-      .container {
-        padding: 20px 15px;
-        border-width: 3px;
-      }
-      .SanJuanPabloII {
-        max-width: 200px;
+      #countdown {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -82,8 +83,37 @@
 <body>
   <div class="container">
     <h1>Página en Construcción</h1>
-    <p>Estamos trabajando para traerte algo increíble.<br>¡Vuelve pronto!</p>
-    <img src="SJPII2.png" alt="San Juan Pablo II" class="SanJuanPabloII">
+    <p>Estamos trabajando para traerte algo increíble.</p>
+    <p>¡Vuelve Pronto!</p>
+    <img src="SJPII2.png" alt="San Juan Pablo II">
+    <div id="countdown"></div>
   </div>
+
+  <script>
+      const targetDate = new Date("December 1, 2025 10:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        countdownElement.innerHTML = "¡Actualiza la Pagina!";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `Faltan ${days} días ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Permanece Actualizado sin Parar
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 0);
+  </script>
 </body>
 </html>
