@@ -11,6 +11,11 @@
       margin: 0;
       padding: 0;
     }
+    
+      @font-face {
+    font-family: 'Lovelo Line';
+    src: url('../Lovelo Line Bold.otf') format('opentype');
+  }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -18,7 +23,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, #f3f3f3, #e0e7ff);
+      background: linear-gradient(135deg, #929606, #133634);
       color: #222;
       text-align: center;
       padding: 20px;
@@ -28,22 +33,22 @@
       max-width: 500px;
       width: 100%;
       padding: 30px 20px;
-      border: 4px dashed #0078d7;
+      border: 4px dashed #929606;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.85);
+      background: #fff;
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #0078d7;
+      color: #118121;
       word-wrap: break-word;
     }
 
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: #000;
       line-height: 1.5;
       margin-bottom: 15px;
     }
@@ -51,7 +56,7 @@
     #countdown {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #0078d7;
+      color: #000;
       margin-top: 15px;
     }
 
@@ -78,15 +83,28 @@
         font-size: 1.2rem;
       }
     }
+      .lovelo {
+    font-family: 'Lovelo Line', sans-serif;
+    font-size: 35px;
+  }
+  
+  @font-face {
+  font-family: 'Moon Bold';
+  src: url('Moon Bold.otf') format('opentype');
+}
+
+.MoonBold {
+  font-family: 'Moon Bold', sans-serif;
+}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Página en Construcción</h1>
+    <h1 class="lovelo">Página en Construcción</h1>
     <p>Estamos trabajando para traerte algo increíble.</p>
     <p>¡Vuelve Pronto!</p>
     <img src="SJPII2.png" alt="San Juan Pablo II">
-    <div id="countdown"></div>
+    <div  class="MoonBold" id="countdown"></div>
   </div>
 
   <script>
@@ -108,7 +126,7 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownElement.innerHTML = `Faltan ${days} días ${hours}h ${minutes}m ${seconds}s`;
+      countdownElement.innerHTML = `Faltan ${days} dias ${hours}h ${minutes}m ${seconds}s`;
     }
 
     // Permanece Actualizado sin Parar
