@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página en Construcción</title>
   <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
   <style>
     * {
       box-sizing: border-box;
@@ -133,5 +134,14 @@
     updateCountdown();
     const interval = setInterval(updateCountdown, 0);
   </script>
+  
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("✅ Service Worker registrado correctamente"))
+    .catch((err) => console.error("❌ Error al registrar el Service Worker:", err));
+}
+</script>
+  
 </body>
 </html>
