@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownElement.innerHTML = `Faltan ${days} días ${hours}h ${minutes}m ${seconds}s`;
+    countdownElement.innerHTML = `Faltan ${days} dias ${hours}h ${minutes}m ${seconds}s`;
   }
 
   // Actualiza cada segundo
