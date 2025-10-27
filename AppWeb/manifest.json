@@ -8,10 +8,11 @@
   "theme_color": "#929606",
   "icons": [
     {
-      "src": "SanJuanPabloII.png",
+      "src": "../SanJuanPabloII.png",
       "sizes": "720x720",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ]
 }
+
