@@ -1,7 +1,7 @@
   /* === Fuentes personalizadas === */
   @font-face {
     font-family: 'Lovelo Line';
-    src: url('Lovelo Line Bold.otf') format('opentype');
+    src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
   }
 
   /* === General === */
@@ -58,7 +58,7 @@
   }
 @font-face {
   font-family: 'Moon Bold';
-  src: url('Moon Bold.otf') format('opentype');
+  src: url('../Fonts/Moon Bold.otf') format('opentype');
 }
 
 .MoonBold {
