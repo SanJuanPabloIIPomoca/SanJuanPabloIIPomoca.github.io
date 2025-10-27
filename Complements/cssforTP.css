@@ -1,4 +1,4 @@
-    * {
+a    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -6,7 +6,7 @@
     
       @font-face {
     font-family: 'Lovelo Line';
-    src: url('Fonts/Lovelo Line Bold.otf') format('opentype');
+    src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
   }
 
     body {
@@ -82,7 +82,7 @@
   
   @font-face {
   font-family: 'Moon Bold';
-  src: url('Fonts/Moon Bold.otf') format('opentype');
+  src: url('../Fonts/Moon Bold.otf') format('opentype');
 }
 
 .MoonBold {
