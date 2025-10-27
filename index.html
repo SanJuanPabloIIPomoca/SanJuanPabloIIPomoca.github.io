@@ -6,98 +6,7 @@
   <title>Página en Construcción</title>
   <link rel="icon" href="images/SanJuanPabloII.png" type="image/png">
   <link rel="manifest" href="AppWeb/manifest.json">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-      @font-face {
-    font-family: 'Lovelo Line';
-    src: url('Fonts/Lovelo Line Bold.otf') format('opentype');
-  }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #929606, #133634);
-      color: #222;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 500px;
-      width: 100%;
-      padding: 30px 20px;
-      border: 4px dashed #929606;
-      border-radius: 20px;
-      background: #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #118121;
-      word-wrap: break-word;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #000;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-    #countdown {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #000;
-      margin-top: 15px;
-    }
-
-    img {
-      margin-top: 20px;
-      width: 100%;
-      max-width: 300px;
-      border-radius: 15px;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      #countdown {
-        font-size: 1.2rem;
-      }
-    }
-      .lovelo {
-    font-family: 'Lovelo Line', sans-serif;
-    font-size: 35px;
-  }
-  
-  @font-face {
-  font-family: 'Moon Bold';
-  src: url('Fonts/Moon Bold.otf') format('opentype');
-}
-
-.MoonBold {
-  font-family: 'Moon Bold', sans-serif;
-}
-  </style>
+  <link rel="stylesheet" href="cssforTP.css">
 </head>
 <body>
   <div class="container">
@@ -108,40 +17,7 @@
     <div  class="MoonBold" id="countdown"></div>
   </div>
 
-  <script>
-      const targetDate = new Date("December 1, 2025 10:00:00").getTime();
-    const countdownElement = document.getElementById("countdown");
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        countdownElement.innerHTML = "¡Actualiza la Pagina!";
-        clearInterval(interval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownElement.innerHTML = `Faltan ${days} dias ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    // Permanece Actualizado sin Parar
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 0);
-  </script>
-  
-  <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("AppWeb/sw.js")
-    .then(() => console.log("✅ Service Worker registrado correctamente"))
-    .catch((err) => console.error("❌ Error al registrar el Service Worker:", err));
-}
-</script>
+<script src="../Complements/jsforTP.js"></script>
   
 </body>
 </html>
