@@ -1,11 +1,12 @@
 const CACHE_NAME = "parroquia-sjpii-v1";
 const ASSETS = [
   "./",
-  "./index.html",
-  "./favicon.png",
-  "./logo-720.png",
-  "./Lovelo Line Bold.otf",
-  "./Moon Bold.otf"
+  "../index.html",
+  "../Diócesis_de_Tabasco/index.htm",
+  "../images/SanJuanPabloII.png",
+  "../images/Obispo de Tabasco.png",
+  "../fonts/Lovelo Line Bold.otf",
+  "../fonts/Moon Bold.otf"
 ];
 
 // Instalar: guardar en caché los archivos
@@ -30,3 +31,4 @@ self.addEventListener("fetch", (event) => {
     caches.match(event.request).then((cached) => cached || fetch(event.request))
   );
 });
+
