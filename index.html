@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página en Construcción</title>
   <link rel="icon" href="SanJuanPabloII.png" type="image/png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="AppWeb/manifest.json">
   <style>
     * {
       box-sizing: border-box;
@@ -15,7 +15,7 @@
     
       @font-face {
     font-family: 'Lovelo Line';
-    src: url('../Lovelo Line Bold.otf') format('opentype');
+    src: url('Fonts/Lovelo Line Bold.otf') format('opentype');
   }
 
     body {
@@ -91,7 +91,7 @@
   
   @font-face {
   font-family: 'Moon Bold';
-  src: url('Moon Bold.otf') format('opentype');
+  src: url('Fonts/Moon Bold.otf') format('opentype');
 }
 
 .MoonBold {
@@ -137,7 +137,7 @@
   
   <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js")
+  navigator.serviceWorker.register("AppWeb/sw.js")
     .then(() => console.log("✅ Service Worker registrado correctamente"))
     .catch((err) => console.error("❌ Error al registrar el Service Worker:", err));
 }
@@ -145,4 +145,3 @@ if ("serviceWorker" in navigator) {
   
 </body>
 </html>
-
