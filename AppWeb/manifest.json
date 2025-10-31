@@ -2,7 +2,7 @@
   "name": "Parroquia San Juan Pablo II Pomoca",
   "short_name": "San Juan Pablo II",
   "description": "San Juan Pablo II, Abriendo Caminos de Esperanza.",
-  "start_url": "index.html",
+  "start_url": "../index.html",
   "display": "standalone",
   "background_color": "#9E9E9E",
   "theme_color": "#929606",
@@ -15,6 +15,7 @@
     }
   ]
 }
+
 
 
 
