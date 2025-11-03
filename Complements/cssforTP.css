@@ -79,11 +79,13 @@ p {
 
 /* Imagen tipo anuncio al lado */
 .ad-banner {
-  flex: 0 0 200px; /* Ancho fijo */
+  width: 120px;   /* Ancho fijo */
+  height: auto;   /* Alto proporcional */
   border-radius: 10px;
   object-fit: cover;
-  margin-top: 0; /* Alineada con la parte superior del recuadro */
+  margin-top: 0;  /* Alineada con la parte superior del recuadro */
 }
+
 
 /* Animación opcional */
 @keyframes pulse {
