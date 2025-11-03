@@ -5,6 +5,7 @@
   padding: 0;
 }
 
+/* Fuentes personalizadas */
 @font-face {
   font-family: 'Lovelo Line';
   src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
@@ -15,6 +16,7 @@
   src: url('../Fonts/Moon Bold.otf') format('opentype');
 }
 
+/* Estilo body */
 body {
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -27,23 +29,25 @@ body {
   padding: 20px;
 }
 
-/* Contenedor principal con recuadro y anuncio */
+/* Contenedor principal que incluye recuadro y anuncio */
 .page-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alinea la parte superior */
+  align-items: flex-start; /* Alinea la parte superior del recuadro */
   gap: 20px; /* Espacio entre recuadro y anuncio */
-  flex-wrap: nowrap; /* NO permite que el anuncio baje debajo */
+  flex-wrap: nowrap; /* No permite que el anuncio baje debajo */
 }
 
 /* Recuadro principal */
 .container {
-  flex: 0 0 500px; /* Mantiene ancho fijo */
+  flex: 0 0 500px; /* Ancho fijo */
   padding: 30px 20px;
   border: 4px dashed #929606;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Títulos y texto */
@@ -77,15 +81,13 @@ p {
   border-radius: 15px;
 }
 
-/* Imagen tipo anuncio al lado */
+/* Imagen tipo anuncio al lado del container */
 .ad-banner {
-  width: auto;
-  height: 470px;
+  height: 100%;   /* Mismo alto que el container */
+  width: auto;    /* Ancho proporcional */
   border-radius: 10px;
   object-fit: cover;
-  margin-top: 0;
 }
-
 
 /* Animación opcional */
 @keyframes pulse {
@@ -101,4 +103,17 @@ p {
 
 .MoonBold {
   font-family: 'Moon Bold', sans-serif;
+}
+
+/* Responsivo (opcional para texto) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  #countdown {
+    font-size: 1.2rem;
+  }
 }
