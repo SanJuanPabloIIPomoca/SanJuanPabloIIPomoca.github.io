@@ -40,7 +40,8 @@ body {
 
 /* Recuadro principal */
 .container {
-  flex: 0 0 500px; /* Ancho fijo */
+  width: 550px;
+  height: 370px;   /* Alto proporcional */
   padding: 30px 20px;
   border: 4px dashed #929606;
   border-radius: 20px;
@@ -73,18 +74,19 @@ p {
   margin-top: 15px;
 }
 
-/* Imagen principal dentro del recuadro */
 .container img {
-  margin-top: 20px;
+  display: block;       /* Necesario para que funcione margin auto */
+  margin: 35px auto 0;  /* 20px arriba, auto a los lados, 0 abajo */
   width: 100%;
   max-width: 300px;
   border-radius: 15px;
 }
 
+
 /* Imagen tipo anuncio al lado del container */
 .ad-banner {
-  max-height: 470px; /* Altura máxima aproximada del container */
   width: auto;       /* Mantiene proporción */
+  height: 370px;   /* Alto proporcional */
   border-radius: 10px;
   object-fit: cover;
 }
