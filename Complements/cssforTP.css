@@ -83,8 +83,8 @@ p {
 
 /* Imagen tipo anuncio al lado del container */
 .ad-banner {
-  height: 100%;   /* Mismo alto que el container */
-  width: auto;    /* Ancho proporcional */
+  max-height: 470px; /* Altura máxima aproximada del container */
+  width: auto;       /* Mantiene proporción */
   border-radius: 10px;
   object-fit: cover;
 }
@@ -105,7 +105,7 @@ p {
   font-family: 'Moon Bold', sans-serif;
 }
 
-/* Responsivo (opcional para texto) */
+/* Responsivo para texto */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
@@ -115,5 +115,8 @@ p {
   }
   #countdown {
     font-size: 1.2rem;
+  }
+  .ad-banner {
+    max-height: 350px; /* Ajuste para móviles si quieres */
   }
 }
