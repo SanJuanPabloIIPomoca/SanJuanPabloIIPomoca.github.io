@@ -18,6 +18,126 @@
   </div>
 
 <script src="../Complements/jsforTP.js"></script>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groove+</title>
+<link rel="icon" href="favicon.png" type="image/x-icon">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1F1F1F; /* Color de respaldo */
+    background-image: url('background.png'); /* Tu fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header img {
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto 10px;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.artists-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.artist-card {
+    background-color: #333333;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.artist-name {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media(max-width: 500px) {
+    .artist-card img {
+        height: 150px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="icon.png" alt="Inicio">
+</header>
+
+<div class="artists-container" id="artists-container">
+</div>
+
+<script>
+const artists = [
+    { artist: "Bad Bunny", cover: "BadBunny.jpg", playlist: "/Groove/Bad-Bunny" },
+    
+    { artist: "Rauw Alejandro", cover: "RauwAlejandro.jpg", playlist: "/Groove/Rauw-Alejandro" },
+];
+
+const container = document.getElementById('artists-container');
+
+artists.forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'artist-card';
+    card.onclick = () => window.location.href = a.playlist;
+
+    const img = document.createElement('img');
+    img.src = a.cover;
+    img.alt = `${a.artist} portada`;
+
+    const name = document.createElement('div');
+    name.className = 'artist-name';
+    name.textContent = a.artist;
+
+    card.appendChild(img);
+    card.appendChild(name);
+    container.appendChild(card);
+});
+</script>
+
+<script>
+  // Si la página está dentro de un iframe
+  if (window.top !== window.self) {
+    // Redirige a la subcarpeta "iFrame" con su index.html
+    window.top.location = "/iFrame";
+  }
+</script>
   
 </body>
 </html>
