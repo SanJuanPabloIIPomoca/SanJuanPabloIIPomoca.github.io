@@ -9,24 +9,29 @@
   <link rel="stylesheet" href="../Complements/cssforTP.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="lovelo">Página en Construcción</h1>
-    <p>Estamos trabajando para traerte algo increíble.</p>
-    <p>¡Vuelve Pronto!</p>
-    <img src="images/SJPII2.png" alt="San Juan Pablo II">
-    <div  class="MoonBold" id="countdown"></div>
+  <div class="page-wrapper">
+    
+    <!-- Recuadro principal -->
+    <div class="container">
+      <h1 class="lovelo">Página en Construcción</h1>
+      <p>Estamos trabajando para traerte algo increíble.</p>
+      <p>¡Vuelve Pronto!</p>
+      <div id="countdown" class="MoonBold"></div>
+      <img src="images/SJPII2.png" alt="San Juan Pablo II">
+    </div>
+
+    <!-- Imagen tipo anuncio -->
+    <img class="ad-banner" src="images/Tombola.png" alt="Anuncio">
+    
   </div>
 
-<script src="../Complements/jsforTP.js"></script>
+  <script src="../Complements/jsforTP.js"></script>
 
-<script>
-  // Si la página está dentro de un iframe
-  if (window.top !== window.self) {
-    // Redirige a la subcarpeta "iFrame" con su index.html
-    window.top.location = "/iFrame";
-  }
-</script>
-
-  
+  <script>
+    // Redirige si la página está dentro de un iframe
+    if (window.top !== window.self) {
+      window.top.location = "/iFrame";
+    }
+  </script>
 </body>
 </html>
