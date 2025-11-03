@@ -1,88 +1,121 @@
-a    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-      @font-face {
-    font-family: 'Lovelo Line';
-    src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
-  }
+/* Reseteo global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #929606, #133634);
-      color: #222;
-      text-align: center;
-      padding: 20px;
-    }
+/* Fuentes personalizadas */
+@font-face {
+  font-family: 'Lovelo Line';
+  src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
+}
 
-    .container {
-      max-width: 500px;
-      width: 100%;
-      padding: 30px 20px;
-      border: 4px dashed #929606;
-      border-radius: 20px;
-      background: #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #118121;
-      word-wrap: break-word;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #000;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-    #countdown {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #000;
-      margin-top: 15px;
-    }
-
-    img {
-      margin-top: 20px;
-      width: 100%;
-      max-width: 300px;
-      border-radius: 15px;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      #countdown {
-        font-size: 1.2rem;
-      }
-    }
-      .lovelo {
-    font-family: 'Lovelo Line', sans-serif;
-    font-size: 35px;
-  }
-  
-  @font-face {
+@font-face {
   font-family: 'Moon Bold';
   src: url('../Fonts/Moon Bold.otf') format('opentype');
+}
+
+/* Estilo body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #929606, #133634);
+  color: #222;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Contenedor principal que incluye recuadro y anuncio */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Para alinear la parte superior del recuadro con el anuncio */
+  gap: 20px; /* Espacio entre el recuadro y el anuncio */
+  flex-wrap: wrap; /* Para pantallas pequeñas que el anuncio baje debajo */
+}
+
+/* Recuadro principal */
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 30px 20px;
+  border: 4px dashed #929606;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Títulos y texto */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #118121;
+  word-wrap: break-word;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Countdown */
+#countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: 15px;
+}
+
+/* Imagen principal dentro del recuadro */
+.container img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+/* Imagen tipo anuncio al lado del recuadro */
+.ad-banner {
+  width: 200px;       /* Ajusta al tamaño que quieras */
+  max-width: 30vw;    /* Responsivo */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Animaciones opcionales */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  #countdown {
+    font-size: 1.2rem;
+  }
+  .ad-banner {
+    width: 100%; /* El anuncio baja debajo y ocupa todo el ancho disponible */
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+
+/* Fuentes personalizadas para títulos */
+.lovelo {
+  font-family: 'Lovelo Line', sans-serif;
+  font-size: 35px;
 }
 
 .MoonBold {
