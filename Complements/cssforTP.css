@@ -5,7 +5,6 @@
   padding: 0;
 }
 
-/* Fuentes personalizadas */
 @font-face {
   font-family: 'Lovelo Line';
   src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
@@ -16,7 +15,6 @@
   src: url('../Fonts/Moon Bold.otf') format('opentype');
 }
 
-/* Estilo body */
 body {
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -29,19 +27,18 @@ body {
   padding: 20px;
 }
 
-/* Contenedor principal que incluye recuadro y anuncio */
+/* Contenedor principal con recuadro y anuncio */
 .page-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Para alinear la parte superior del recuadro con el anuncio */
-  gap: 20px; /* Espacio entre el recuadro y el anuncio */
-  flex-wrap: wrap; /* Para pantallas pequeñas que el anuncio baje debajo */
+  align-items: flex-start; /* Alinea la parte superior */
+  gap: 20px; /* Espacio entre recuadro y anuncio */
+  flex-wrap: nowrap; /* NO permite que el anuncio baje debajo */
 }
 
 /* Recuadro principal */
 .container {
-  max-width: 500px;
-  width: 100%;
+  flex: 0 0 500px; /* Mantiene ancho fijo */
   padding: 30px 20px;
   border: 4px dashed #929606;
   border-radius: 20px;
@@ -80,39 +77,21 @@ p {
   border-radius: 15px;
 }
 
-/* Imagen tipo anuncio al lado del recuadro */
+/* Imagen tipo anuncio al lado */
 .ad-banner {
-  width: 200px;       /* Ajusta al tamaño que quieras */
-  max-width: 30vw;    /* Responsivo */
+  flex: 0 0 200px; /* Ancho fijo */
   border-radius: 10px;
   object-fit: cover;
+  margin-top: 0; /* Alineada con la parte superior del recuadro */
 }
 
-/* Animaciones opcionales */
+/* Animación opcional */
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  #countdown {
-    font-size: 1.2rem;
-  }
-  .ad-banner {
-    width: 100%; /* El anuncio baja debajo y ocupa todo el ancho disponible */
-    max-width: 300px;
-    margin-top: 20px;
-  }
-}
-
-/* Fuentes personalizadas para títulos */
+/* Tipografías personalizadas */
 .lovelo {
   font-family: 'Lovelo Line', sans-serif;
   font-size: 35px;
