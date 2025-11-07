@@ -1,123 +1,90 @@
-/* Reseteo global */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+      @font-face {
+    font-family: 'Lovelo Line';
+    src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
+  }
 
-/* Fuentes personalizadas */
-@font-face {
-  font-family: 'Lovelo Line';
-  src: url('../Fonts/Lovelo Line Bold.otf') format('opentype');
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #929606, #133634);
+      color: #222;
+      text-align: center;
+      padding: 20px;
+    }
 
+    .container {
+      max-width: 500px;
+      width: 100%;
+      padding: 30px 20px;
+      border: 4px dashed #929606;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #118121;
+      word-wrap: break-word;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #000;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    #countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+      margin-top: 15px;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      #countdown {
+        font-size: 1.2rem;
+      }
+    }
+      .lovelo {
+    font-family: 'Lovelo Line', sans-serif;
+    font-size: 35px;
+  }
+  
 @font-face {
   font-family: 'SM';
   src: url('https://sanjuanpabloiipomoca.github.io/Fonts/SM.otf') format('opentype');
 }
 
-/* Estilo body */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #929606, #133634);
-  color: #222;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Contenedor principal que incluye recuadro y anuncio */
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Alinea la parte superior del recuadro */
-  gap: 20px; /* Espacio entre recuadro y anuncio */
-  flex-wrap: nowrap; /* No permite que el anuncio baje debajo */
-}
-
-/* Recuadro principal */
-.container {
-  width: 550px;
-  height: 370px;   /* Alto proporcional */
-  padding: 30px 20px;
-  border: 4px dashed #929606;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Títulos y texto */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #118121;
-  word-wrap: break-word;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #000;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-/* Countdown */
-#countdown {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
-  margin-top: 15px;
-}
-
-.container img {
-  display: block;       /* Necesario para que funcione margin auto */
-  margin: 35px auto 0;  /* 20px arriba, auto a los lados, 0 abajo */
-  width: 100%;
-  max-width: 300px;
-  border-radius: 15px;
-}
-
-
-/* Imagen tipo anuncio al lado del container */
-.ad-banner {
-  width: auto;       /* Mantiene proporción */
-  height: 370px;   /* Alto proporcional */
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* Animación opcional */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* Tipografías personalizadas */
-.lovelo {
-  font-family: 'Lovelo Line', sans-serif;
-  font-size: 35px;
-}
-
 .MoonBold {
   font-family: 'SM', sans-serif;
-
-/* Responsivo para texto */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  #countdown {
-    font-size: 1.2rem;
-  }
-  .ad-banner {
-    max-height: 350px; /* Ajuste para móviles si quieres */
-  }
 }
