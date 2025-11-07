@@ -57,12 +57,12 @@
     color: #000;
   }
 @font-face {
-  font-family: 'Moon Bold';
-  src: url('../Fonts/Moon Bold.otf') format('opentype');
+  font-family: 'SM';
+  src: url('https://sanjuanpabloiipomoca.github.io/Fonts/SM.otf') format('opentype');
 }
 
 .MoonBold {
-  font-family: 'Moon Bold', sans-serif;
+  font-family: 'SM', sans-serif;
 }
 
   .misa {
@@ -108,4 +108,4 @@
 
   html {
     scroll-behavior: smooth;
-  }
+  }    
