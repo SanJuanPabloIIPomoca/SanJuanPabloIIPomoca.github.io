@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     countdownElement.innerHTML = `Faltan ${days} dias ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  // Actualiza cada segundo
+  // Actualiza Infinitamente (puede causar retraso en dispositivos antiguos o de gama baja/entrada)
   updateCountdown();
-  const interval = setInterval(updateCountdown, 1000);
+  const interval = setInterval(updateCountdown, 0);
 });
 
 // =========================
