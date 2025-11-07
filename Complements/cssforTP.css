@@ -12,9 +12,8 @@
 }
 
 @font-face {
-  font-family: 'Moon Bold';
-  src: url('../Fonts/Moon Bold.otf') format('opentype');
-}
+  font-family: 'SM';
+  src: url('https://sanjuanpabloiipomoca.github.io/Fonts/SM.otf') format('opentype');
 
 /* Estilo body */
 body {
@@ -104,8 +103,7 @@ p {
 }
 
 .MoonBold {
-  font-family: 'Moon Bold', sans-serif;
-}
+  font-family: 'SM', sans-serif;
 
 /* Responsivo para texto */
 @media (max-width: 600px) {
