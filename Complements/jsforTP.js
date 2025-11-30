@@ -3,7 +3,7 @@
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
   const countdownElement = document.getElementById("countdown");
-  const targetDate = new Date("December 1, 2025 10:00:00").getTime();
+  const targetDate = new Date("November 30, 2025 12:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
