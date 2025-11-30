@@ -1,0 +1,33 @@
+name: Auto Rename HTML
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # 12:00 México = 18:00 UTC
+  workflow_dispatch:
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete index.html
+        run: |
+          if [ -f index.html ]; then
+            rm index.html
+          fi
+
+      - name: Rename test.html to index.html
+        run: |
+          if [ -f test.html ]; then
+            mv test.html index.html
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto rename test.html to index.html" || echo "No changes to commit"
+          git push
