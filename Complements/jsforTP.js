@@ -3,10 +3,10 @@
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
   const countdownElement = document.getElementById("countdown");
-  const targetDate = new Date("November 30, 2025 12:00:00").getTime();
+  const targetDate = new Date("December 01, 2025 10:00:00").getTime();
 
   function updateCountdown() {
-    const now = new Date().getTime();
+    const now = Date.now();
     const distance = targetDate - now;
 
     if (distance <= 0) {
@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownElement.innerHTML = `Faltan ${hours}h ${minutes}m ${seconds}s`;
+    countdownElement.innerHTML = `Faltan ${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  // Actualiza Infinitamente (puede causar retraso en dispositivos antiguos o de gama baja/entrada)
   updateCountdown();
   const interval = setInterval(updateCountdown, 0);
 });
+
 
 // =========================
 // 🔧 Service Worker
