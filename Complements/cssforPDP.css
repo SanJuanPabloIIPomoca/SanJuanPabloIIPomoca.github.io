@@ -109,3 +109,45 @@
   html {
     scroll-behavior: smooth;
   }    
+/* === Botones de comunicación modernos === */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-btn img {
+  height: 24px;
+}
+
+/* Colores según tipo */
+.contact-btn.facebook {
+  background-color: #3b5998; /* azul Facebook */
+}
+
+.contact-btn.phone {
+  background-color: #4CAF50; /* verde teléfono */
+}
+
+.contact-btn.email {
+  background-color: #f44336; /* rojo correo */
+}
+
+/* Hover efectos */
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
