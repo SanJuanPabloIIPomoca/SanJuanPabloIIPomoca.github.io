@@ -1,7 +1,7 @@
-/* ===================================================================
- * Hesed 1.0.0 - Main JS
- *
- * ------------------------------------------------------------------- */
+/* JavaScript Principal de SanJuanPabloIIPomoca.org
+ * el uso indebido de este codigo puede ser sentenciado
+ * creado por: ChrisWorld™ - Christopher
+ * donado a nuestra Parroquia San Juan Pablo II del Fracc. Pomoca */
 
 (function($) {
 
@@ -147,3 +147,5 @@
     })();
 
 })(jQuery);
+
+/* Creado por: ChrisWorld™ - Christopher */
