@@ -1,67 +1,7 @@
-/* =================================================================== 
- *  Hesed Main Stylesheet
- *  Template Ver. 1.0.0
- *  06-26-2019
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # custom block grid STACK breakpoints
- *  # base style overrides
- *    ## links
- *  # typography & general theme styles
- *    ## lists
- *    ## responsive video container
- *    ## floated image
- *    ## tables
- *    ## spacing 
- *  # preloader
- *  # forms
- *    ## style placeholder text
- *    ## change autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *    ## additional typo styles
- *    ## skillbars
- *    ## alert box
- *    ## pagination
- *  # common and reusable styles
- *    ## events list
- *    ## block list
- *  # site header
- *    ## header logo
- *    ## main navigation
- *    ## mobile menu toggle
- *  # hero
- *    ## hero left bar
- *    ## hero content
- *    ## hero content buttons
- *    ## hero social
- *    ## hero scroll
- *    ## hero animations
- *  # about
- *    ## about content
- *    ## schedule of services
- *  # connect
- *  # events
- *  # current series
- *    ## series image
- *    ## series content
- *    ## series buttons
- *    ## series subscribe
- *  # social
- *  # footer
- *    ## footer logo
- *    ## footer list
- *    ## copyright
- *    ## go to top
- *  # page styles and page components
- *    ## page header
- *    ## page content
- *    ## about page
- *    ## event page
- *
- * =================================================================== */
-
+/* CSS Principal de SanJuanPabloIIPomoca.org
+ * el uso indebido de este codigo puede ser sentenciado
+ * creado por: ChrisWorld™ - Christopher
+ * donado a nuestra Parroquia San Juan Pablo II del Fracc. Pomoca */
 
 /* ===================================================================
  * # custom block grid STACK breakpoints
@@ -3580,4 +3520,4 @@ html.no-csstransitions .hero-content {
 
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Creado por: ChrisWorld™ - Christopher */
