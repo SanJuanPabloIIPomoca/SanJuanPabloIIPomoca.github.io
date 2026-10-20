@@ -1,4 +1,4 @@
-/* JavaScript Principal de SanJuanPabloIIPomoca.org
+/* JavaScript Plugins de SanJuanPabloIIPomoca.org
  * el uso indebido de este codigo puede ser sentenciado
  * creado por: ChrisWorld™ - Christopher
  * donado a nuestra Parroquia San Juan Pablo II del Fracc. Pomoca */
